@@ -15,8 +15,8 @@ frontend/.next/
 backend/uploads/
 *.log
 
-# lock files (committed per-package)
-package-lock.json
+# lock files (root only — nested ones are committed)
+/package-lock.json
 
 # legacy CLI (superseded by backend/)
 /src/
