@@ -1,0 +1,29 @@
+{
+  "name": "csv-analyst-backend",
+  "version": "1.0.0",
+  "description": "AI Operations Analyst — Express API backend",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parse": "^6.2.1",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^6.34.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^25.6.0",
+    "@types/uuid": "^10.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.3"
+  }
+}
