@@ -277,6 +277,17 @@ Add runtime schema validation on tool results before they are sent back to OpenA
 ### 10. Unit and integration tests
 Cover each tool with fixture CSVs, each guardrail with edge-case inputs, and the agent loop with a mocked OpenAI client (Jest or Vitest).
 
+### 11. Evals
+Add an evaluation framework to measure agent quality systematically:
+
+- **Tool call evals** — given a known CSV, assert that the agent calls the correct tools in the correct order (e.g., `load_csv` always before `detect_anomalies`). Run with a deterministic mock LLM to avoid flakiness.
+- **Output quality evals** — score final reports against a rubric: all 6 sections present, every claim cites a tool, no banned phrases, recommendations are column-specific. Can be automated with an LLM-as-judge prompt.
+- **Anomaly detection evals** — use fixture CSVs with known seeded anomalies (e.g., `ecommerce_orders.csv` with the $49,999 bulk order) and assert they appear in `detect_anomalies` output.
+- **Guardrail evals** — assert that injection strings are always blocked, that outputs missing required sections trigger warnings, and that follow-up questions never re-parse the CSV.
+- **Regression evals** — run the full agent against the sample datasets before every deploy and compare key metrics (anomaly count, top correlations) to a golden baseline to catch prompt or model regressions.
+
+Tools to consider: [Braintrust](https://braintrust.dev), [LangSmith](https://smith.langchain.com), or a simple custom eval runner using Vitest fixtures and `gpt-4o-mini` as judge.
+
 ---
 
 ## Deployment
