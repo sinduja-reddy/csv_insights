@@ -19,6 +19,6 @@ backend/uploads/
 package-lock.json
 
 # legacy CLI (superseded by backend/)
-src/
-tsconfig.json
-package.json
+/src/
+/tsconfig.json
+/package.json
