@@ -2,6 +2,13 @@
 
 A production-grade full-stack web application that analyzes CSV files using OpenAI function calling and produces structured, evidence-based business insights. Behaves like a junior data analyst embedded in an industrial operations team.
 
+## Live Demo
+
+| Service | URL |
+|---|---|
+| **Frontend** | https://frontend-75ye0l219-data-analyst-agent.vercel.app |
+| **Backend** | https://csv-insights-backend-production.up.railway.app |
+
 ---
 
 ## Quick Start
@@ -72,7 +79,8 @@ csv_insights/
 │   └── package.json
 │
 ├── sample_data/
-│   └── operations.csv       60-row industrial dataset for testing
+│   ├── operations.csv        60-row industrial machine dataset
+│   └── ecommerce_orders.csv  120-row e-commerce orders with seeded anomalies
 ├── .env                     OPENAI_API_KEY (git-ignored)
 ├── .env.example
 └── .gitignore
@@ -122,6 +130,10 @@ Express Backend (Node.js)
 | `guardrail` | Guardrail triggered | `message`, `severity` |
 | `error` | Agent or API error | `message`, `blocked` |
 | `done` | Stream closed | — |
+
+### Follow-up question handling
+
+On follow-up questions the server **pre-loads the dataset** before the agent runs, so `state.dataset` is always guaranteed non-null. The agent receives an explicit instruction to skip `load_csv` / `describe_data` and jump straight to the relevant analysis tool. The minimum tool call guardrail is relaxed from 2 to 1 for follow-ups (since `load_csv` is already in cumulative history).
 
 ---
 
@@ -267,11 +279,49 @@ Cover each tool with fixture CSVs, each guardrail with edge-case inputs, and the
 
 ---
 
+## Deployment
+
+Deployed on **Railway** (backend) + **Vercel** (frontend).
+
+### Deploy backend to Railway
+
+```bash
+npm install -g @railway/cli
+railway login
+cd backend
+railway init
+railway variables set OPENAI_API_KEY=sk-...
+railway variables set FRONTEND_URL=https://your-vercel-url.vercel.app
+railway up
+railway domain   # generates public URL
+```
+
+### Deploy frontend to Vercel
+
+```bash
+npm install -g vercel
+vercel login
+cd frontend
+vercel env add NEXT_PUBLIC_API_URL production  # paste Railway URL when prompted
+vercel --prod
+```
+
+### CORS
+
+The backend allows requests from:
+- `FRONTEND_URL` env var (your specific Vercel production URL)
+- Any `*.vercel.app` subdomain (covers all Vercel preview deployments automatically)
+- `http://localhost:3000` (local dev)
+
+No code change needed when Vercel generates new preview URLs on each push.
+
+---
+
 ## Environment Variables
 
-| Variable | Location | Required | Description |
+| Variable | Where to set | Required | Description |
 |---|---|---|---|
-| `OPENAI_API_KEY` | `.env` (root) | Yes | OpenAI API key (`sk-...`) |
-| `NEXT_PUBLIC_API_URL` | `frontend/.env.local` | Yes | Backend URL (default: `http://localhost:3001`) |
-| `PORT` | environment | No | Backend port (default: `3001`) |
-| `FRONTEND_URL` | environment | No | CORS origin (default: `http://localhost:3000`) |
+| `OPENAI_API_KEY` | Railway env vars / root `.env` | Yes | OpenAI API key (`sk-...`) |
+| `NEXT_PUBLIC_API_URL` | Vercel env vars / `frontend/.env.local` | Yes | Backend URL |
+| `FRONTEND_URL` | Railway env vars | No | Explicit CORS allowlist entry |
+| `PORT` | Railway env vars | No | Backend port (Railway sets automatically) |
