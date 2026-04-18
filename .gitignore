@@ -1,3 +1,24 @@
+# secrets
 .env
+frontend/.env.local
+
+# dependencies
 node_modules/
+**/node_modules/
+
+# build output
 dist/
+**/dist/
+frontend/.next/
+
+# runtime
+backend/uploads/
+*.log
+
+# lock files (committed per-package)
+package-lock.json
+
+# legacy CLI (superseded by backend/)
+src/
+tsconfig.json
+package.json
