@@ -59,7 +59,20 @@ function sseWrite(res: Response, event: Record<string, unknown>): void {
 // ─── App setup ──────────────────────────────────────────────────────────────
 
 const app = express();
-app.use(cors({ origin: process.env["FRONTEND_URL"] ?? "http://localhost:3000" }));
+const ALLOWED_ORIGINS = [
+  process.env["FRONTEND_URL"],
+  "http://localhost:3000",
+].filter(Boolean) as string[];
+
+app.use(cors({
+  origin: (origin, cb) => {
+    if (!origin || ALLOWED_ORIGINS.some((o) => origin.startsWith(o)) || origin.endsWith(".vercel.app")) {
+      cb(null, true);
+    } else {
+      cb(new Error(`CORS: origin ${origin} not allowed`));
+    }
+  },
+}));
 app.use(express.json());
 
 const upload = multer({
