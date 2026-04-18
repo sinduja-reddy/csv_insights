@@ -1,0 +1,121 @@
+order_id,date,customer_id,region,category,product_name,quantity,unit_price,discount_pct,revenue,shipping_days,return_flag,customer_age,payment_method
+ORD001,2024-01-02,C1042,North,Electronics,Wireless Headphones,1,89.99,0,89.99,3,0,34,Credit Card
+ORD002,2024-01-02,C2301,South,Clothing,Running Shoes,2,59.99,10,107.98,5,0,27,PayPal
+ORD003,2024-01-03,C0891,East,Home & Garden,Coffee Maker,1,129.99,0,129.99,4,0,45,Credit Card
+ORD004,2024-01-03,C3312,West,Electronics,USB-C Hub,3,34.99,5,99.72,2,0,31,Debit Card
+ORD005,2024-01-04,C1042,North,Books,Data Science Handbook,2,49.99,0,99.98,7,0,34,Credit Card
+ORD006,2024-01-04,C4401,South,Electronics,Smartphone Stand,1,24.99,0,24.99,3,0,22,PayPal
+ORD007,2024-01-05,C0234,East,Clothing,Winter Jacket,1,199.99,15,169.99,6,0,38,Credit Card
+ORD008,2024-01-05,C2891,West,Home & Garden,Air Purifier,1,249.99,0,249.99,4,0,52,Credit Card
+ORD009,2024-01-06,C1203,North,Electronics,Laptop Stand,2,44.99,0,89.98,2,0,29,Debit Card
+ORD010,2024-01-06,C3901,South,Books,Python Programming,1,39.99,0,39.99,7,0,41,PayPal
+ORD011,2024-01-07,C0567,East,Electronics,Mechanical Keyboard,1,149.99,10,134.99,3,0,26,Credit Card
+ORD012,2024-01-07,C2012,West,Clothing,Yoga Pants,2,44.99,5,85.48,5,0,33,PayPal
+ORD013,2024-01-08,C4102,North,Home & Garden,Robot Vacuum,1,349.99,0,349.99,4,1,48,Credit Card
+ORD014,2024-01-08,C1567,South,Electronics,Wireless Mouse,1,39.99,0,39.99,2,0,35,Debit Card
+ORD015,2024-01-09,C0923,East,Books,Machine Learning Guide,3,54.99,10,148.47,6,0,30,Credit Card
+ORD016,2024-01-09,C3204,West,Clothing,Denim Jacket,1,89.99,0,89.99,5,0,24,PayPal
+ORD017,2024-01-10,C1890,North,Electronics,Webcam HD,1,79.99,0,79.99,3,0,37,Credit Card
+ORD018,2024-01-10,C2678,South,Home & Garden,Blender Pro,1,159.99,5,151.99,4,0,43,Credit Card
+ORD019,2024-01-11,C0345,East,Electronics,Gaming Mouse,1,59.99,0,59.99,2,0,21,Debit Card
+ORD020,2024-01-11,C4567,West,Books,Business Strategy,2,34.99,0,69.98,7,0,55,PayPal
+ORD021,2024-01-12,C1234,North,Clothing,Sports T-Shirt,4,29.99,10,107.96,5,0,28,PayPal
+ORD022,2024-01-12,C3089,South,Electronics,Bluetooth Speaker,1,99.99,0,99.99,3,0,32,Credit Card
+ORD023,2024-01-13,C0789,East,Home & Garden,Instant Pot,1,199.99,10,179.99,4,0,47,Credit Card
+ORD024,2024-01-13,C2345,West,Electronics,Tablet Stand,2,29.99,0,59.98,2,0,26,Debit Card
+ORD025,2024-01-14,C1678,North,Books,Cloud Computing,1,44.99,0,44.99,7,0,39,Credit Card
+ORD026,2024-01-14,C4890,South,Clothing,Rain Coat,1,149.99,20,119.99,5,1,44,Credit Card
+ORD027,2024-01-15,C0456,East,Electronics,Smart Watch,1,299.99,0,299.99,3,0,31,Credit Card
+ORD028,2024-01-15,C3567,West,Home & Garden,Standing Desk,1,499.99,5,474.99,6,0,36,Credit Card
+ORD029,2024-01-16,C1901,North,Electronics,Noise Cancelling Buds,1,179.99,0,179.99,3,0,29,PayPal
+ORD030,2024-01-16,C2234,South,Clothing,Compression Leggings,3,39.99,5,113.97,5,0,25,Debit Card
+ORD031,2024-01-17,C0678,East,Books,DevOps Handbook,2,49.99,0,99.98,7,0,33,Credit Card
+ORD032,2024-01-17,C4123,West,Home & Garden,Dyson Vacuum,1,599.99,0,599.99,4,0,51,Credit Card
+ORD033,2024-01-18,C1345,North,Electronics,Monitor 27in,1,379.99,10,341.99,5,0,40,Credit Card
+ORD034,2024-01-18,C3678,South,Clothing,Hoodie,2,54.99,0,109.98,5,0,23,PayPal
+ORD035,2024-01-19,C0912,East,Electronics,Portable Charger,2,34.99,0,69.98,2,0,27,Debit Card
+ORD036,2024-01-19,C2567,West,Home & Garden,Air Fryer,1,129.99,5,123.49,4,0,46,Credit Card
+ORD037,2024-01-20,C1789,North,Books,System Design,1,59.99,0,59.99,7,0,35,Credit Card
+ORD038,2024-01-20,C4234,South,Electronics,Ring Light,1,69.99,10,62.99,3,0,28,PayPal
+ORD039,2024-01-21,C0345,East,Clothing,Waterproof Sneakers,1,119.99,0,119.99,5,1,21,Debit Card
+ORD040,2024-01-21,C3890,West,Home & Garden,Coffee Grinder,1,89.99,0,89.99,4,0,42,Credit Card
+ORD041,2024-01-22,C1456,North,Electronics,External SSD 1TB,1,109.99,0,109.99,2,0,30,Credit Card
+ORD042,2024-01-22,C2789,South,Clothing,Swim Shorts,3,34.99,5,99.72,5,0,26,PayPal
+ORD043,2024-01-23,C0567,East,Books,AI Fundamentals,2,44.99,10,80.98,7,0,38,Credit Card
+ORD044,2024-01-23,C4345,West,Electronics,Smart Plug 4-Pack,2,49.99,0,99.98,2,0,33,Debit Card
+ORD045,2024-01-24,C1023,North,Home & Garden,Humidifier,1,79.99,0,79.99,4,0,49,Credit Card
+ORD046,2024-01-24,C3123,South,Electronics,Dash Cam,1,139.99,5,132.99,3,0,37,Credit Card
+ORD047,2024-01-25,C0789,East,Clothing,Fleece Pullover,2,64.99,0,129.98,5,0,44,PayPal
+ORD048,2024-01-25,C2890,West,Books,Clean Code,1,39.99,0,39.99,7,0,29,Credit Card
+ORD049,2024-01-26,C1567,North,Electronics,VR Headset,1,449.99,0,449.99,4,0,27,Credit Card
+ORD050,2024-01-26,C4456,South,Home & Garden,Sous Vide Cooker,1,199.99,10,179.99,5,0,53,Credit Card
+ORD051,2024-01-27,C0234,East,Electronics,Wireless Charger,2,29.99,0,59.98,2,0,31,Debit Card
+ORD052,2024-01-27,C3234,West,Clothing,Thermal Vest,1,49.99,5,47.49,5,0,36,PayPal
+ORD053,2024-01-28,C1890,North,Books,Kubernetes Guide,1,54.99,0,54.99,7,0,34,Credit Card
+ORD054,2024-01-28,C2456,South,Electronics,Action Camera,1,259.99,10,233.99,3,0,25,Credit Card
+ORD055,2024-01-29,C0901,East,Home & Garden,Smart Thermostat,1,179.99,0,179.99,4,1,48,Credit Card
+ORD056,2024-01-29,C4567,West,Clothing,Trail Running Shorts,2,44.99,0,89.98,5,0,32,PayPal
+ORD057,2024-01-30,C1234,North,Electronics,Laptop Cooling Pad,1,34.99,0,34.99,2,0,28,Debit Card
+ORD058,2024-01-30,C3345,South,Books,Product Management,2,39.99,5,75.98,7,0,41,Credit Card
+ORD059,2024-01-31,C0678,East,Home & Garden,Electric Kettle,1,59.99,0,59.99,4,0,39,Credit Card
+ORD060,2024-01-31,C2901,West,Electronics,HDMI 2.1 Cable,3,19.99,0,59.97,2,0,24,Debit Card
+ORD061,2024-02-01,C1345,North,Clothing,Puffer Vest,1,79.99,10,71.99,5,0,45,Credit Card
+ORD062,2024-02-01,C4678,South,Electronics,Ergonomic Chair,1,599.99,0,599.99,7,0,38,Credit Card
+ORD063,2024-02-02,C0456,East,Books,Statistics Essentials,1,44.99,0,44.99,7,0,33,PayPal
+ORD064,2024-02-02,C3456,West,Home & Garden,Food Dehydrator,1,149.99,5,142.49,5,0,50,Credit Card
+ORD065,2024-02-03,C1789,North,Electronics,Mechanical Keyboard,1,149.99,0,149.99,3,0,29,Credit Card
+ORD066,2024-02-03,C2123,South,Clothing,Gym Gloves,2,24.99,0,49.98,5,0,26,Debit Card
+ORD067,2024-02-14,C9999,North,Electronics,Bulk Order Laptops,50,999.99,0,49999.50,1,0,99,Credit Card
+ORD068,2024-02-04,C0789,East,Home & Garden,Cast Iron Pan,1,89.99,0,89.99,4,0,43,Credit Card
+ORD069,2024-02-04,C4789,West,Books,Deep Learning,2,59.99,10,107.98,7,0,31,Credit Card
+ORD070,2024-02-05,C1456,North,Electronics,USB Microphone,1,119.99,5,113.99,3,0,35,Credit Card
+ORD071,2024-02-05,C3567,South,Clothing,Compression Socks,4,19.99,0,79.96,5,0,47,PayPal
+ORD072,2024-02-06,C0567,East,Home & Garden,Espresso Machine,1,399.99,0,399.99,5,0,40,Credit Card
+ORD073,2024-02-06,C2678,West,Electronics,Smart Doorbell,1,199.99,10,179.99,3,1,36,Credit Card
+ORD074,2024-02-07,C1678,North,Books,Agile Project Mgmt,1,34.99,0,34.99,7,0,38,PayPal
+ORD075,2024-02-07,C4890,South,Clothing,Down Jacket,1,229.99,15,195.49,5,0,42,Credit Card
+ORD076,2024-02-08,C0234,East,Electronics,Portable Speaker,1,149.99,0,149.99,3,0,28,Debit Card
+ORD077,2024-02-08,C3789,West,Home & Garden,Slow Cooker,1,79.99,0,79.99,4,0,55,Credit Card
+ORD078,2024-02-09,C1023,North,Electronics,Drone Mini,1,299.99,0,299.99,4,0,23,Credit Card
+ORD079,2024-02-09,C2345,South,Clothing,Linen Shirt,2,49.99,5,94.98,5,0,34,PayPal
+ORD080,2024-02-10,C0901,East,Books,UX Design Patterns,1,49.99,0,49.99,7,0,37,Credit Card
+ORD081,2024-02-10,C4123,West,Home & Garden,Wine Cooler,1,299.99,5,284.99,5,1,49,Credit Card
+ORD082,2024-02-11,C1567,North,Electronics,4K Webcam,1,199.99,0,199.99,3,0,32,Credit Card
+ORD083,2024-02-11,C3890,South,Clothing,Cargo Pants,1,69.99,10,62.99,5,0,27,Debit Card
+ORD084,2024-02-12,C0678,East,Home & Garden,Bread Maker,1,119.99,0,119.99,4,0,51,Credit Card
+ORD085,2024-02-12,C2567,West,Electronics,Gaming Headset,1,129.99,5,123.49,3,0,22,PayPal
+ORD086,2024-02-13,C1234,North,Books,Rust Programming,2,49.99,0,99.98,7,0,30,Credit Card
+ORD087,2024-02-13,C4234,South,Clothing,Athletic Shorts,3,29.99,0,89.97,5,0,25,Debit Card
+ORD088,2024-02-14,C0345,East,Electronics,Smart Scale,1,59.99,0,59.99,2,0,44,Credit Card
+ORD089,2024-02-15,C3123,West,Home & Garden,Induction Cooktop,1,149.99,5,142.49,4,0,46,Credit Card
+ORD090,2024-02-15,C1890,North,Electronics,Wireless Keyboard,1,79.99,0,79.99,2,0,38,Credit Card
+ORD091,2024-02-16,C2789,South,Books,GraphQL in Action,1,44.99,0,44.99,7,0,29,PayPal
+ORD092,2024-02-16,C0456,East,Clothing,Merino Wool Socks,4,19.99,10,71.96,5,0,35,Credit Card
+ORD093,2024-02-17,C4345,West,Electronics,Projector Mini,1,349.99,0,349.99,4,0,41,Credit Card
+ORD094,2024-02-17,C1345,North,Home & Garden,Dutch Oven,1,179.99,0,179.99,4,0,48,Credit Card
+ORD095,2024-02-18,C3234,South,Electronics,Ring Video Doorbell,1,249.99,10,224.99,3,0,36,Credit Card
+ORD096,2024-02-18,C0789,East,Clothing,Softshell Jacket,1,159.99,5,151.99,5,0,31,PayPal
+ORD097,2024-02-19,C2890,West,Books,TypeScript Deep Dive,2,39.99,0,79.98,7,0,27,Credit Card
+ORD098,2024-02-19,C1456,North,Electronics,LED Desk Lamp,1,49.99,0,49.99,2,0,33,Debit Card
+ORD099,2024-02-20,C4456,South,Home & Garden,Vegetable Steamer,1,39.99,0,39.99,4,0,52,Credit Card
+ORD100,2024-02-20,C0901,East,Electronics,Smart Home Hub,1,129.99,0,129.99,3,0,39,Credit Card
+ORD101,2024-02-21,C3345,West,Clothing,Performance Polo,2,44.99,5,85.48,5,0,28,PayPal
+ORD102,2024-02-21,C1789,North,Books,Docker Mastery,1,49.99,0,49.99,7,0,36,Credit Card
+ORD103,2024-02-22,C2456,South,Electronics,Solar Power Bank,1,79.99,10,71.99,3,0,30,Credit Card
+ORD104,2024-02-22,C0567,East,Home & Garden,Mandoline Slicer,1,69.99,0,69.99,4,0,45,Credit Card
+ORD105,2024-02-23,C4567,West,Electronics,Fitness Tracker,1,89.99,0,89.99,2,0,26,Debit Card
+ORD106,2024-02-23,C1023,North,Clothing,Packable Rain Jacket,1,99.99,10,89.99,5,0,34,Credit Card
+ORD107,2024-02-24,C3456,South,Books,The Pragmatic Prog,1,44.99,0,44.99,7,0,43,PayPal
+ORD108,2024-02-24,C0234,East,Electronics,Smart Bulb 4-Pack,2,39.99,5,75.98,2,0,37,Credit Card
+ORD109,2024-02-25,C2901,West,Home & Garden,Pasta Maker,1,159.99,0,159.99,5,0,50,Credit Card
+ORD110,2024-02-25,C1678,North,Electronics,Mechanical Numpad,1,59.99,0,59.99,2,0,31,Debit Card
+ORD111,2024-02-26,C4678,South,Clothing,Windbreaker,1,129.99,10,116.99,5,1,24,Credit Card
+ORD112,2024-02-26,C0678,East,Books,Zero to One,1,24.99,0,24.99,7,0,42,PayPal
+ORD113,2024-02-27,C3567,West,Electronics,USB Hub 7-Port,1,44.99,0,44.99,2,0,35,Debit Card
+ORD114,2024-02-27,C1234,North,Home & Garden,Ceramic Knife Set,1,129.99,5,123.49,4,0,47,Credit Card
+ORD115,2024-02-28,C2123,South,Electronics,Smart Garage Opener,1,149.99,0,149.99,3,0,53,Credit Card
+ORD116,2024-02-28,C0456,East,Clothing,Bamboo T-Shirt,3,24.99,0,74.97,5,0,29,PayPal
+ORD117,2024-02-29,C4789,West,Books,Clean Architecture,1,49.99,0,49.99,7,0,38,Credit Card
+ORD118,2024-02-29,C1567,North,Electronics,Portable Monitor,1,279.99,5,265.99,4,0,32,Credit Card
+ORD119,2024-02-29,C3678,South,Home & Garden,Stand Mixer,1,449.99,0,449.99,5,0,56,Credit Card
+ORD120,2024-02-29,C0789,East,Electronics,Webcam Ring Light,1,89.99,10,80.99,3,0,27,Credit Card
