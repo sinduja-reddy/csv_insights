@@ -290,6 +290,43 @@ Tools to consider: [Braintrust](https://braintrust.dev), [LangSmith](https://smi
 
 ---
 
+## Next Up — Turning This Into Full Automation
+
+The agent currently runs on demand (user uploads a file and asks a question). The next phase converts it into a fully automated system that runs without any human trigger.
+
+### 1. Scheduled Runs
+Analyze a new CSV every morning at 8am automatically.
+
+- Add a cron endpoint `POST /api/run-scheduled` that accepts a file path and query
+- Use Railway's built-in cron jobs or a tool like [Inngest](https://inngest.com) to trigger it on a schedule
+- Store the generated report in Postgres so stakeholders can view it without re-running
+- Example: every day at 8am, pull yesterday's operations export, run the full analysis, and email the report
+
+### 2. Event-Driven Triggers
+Auto-trigger analysis when a new file lands in a storage bucket.
+
+- **S3** — add a Lambda or S3 event notification that calls `POST /api/analyze` when a new `.csv` is uploaded to a specific bucket
+- **Google Drive** — use the Google Drive Webhook API to watch a folder and trigger analysis on new files
+- The agent already accepts a `filePath` — swap it for a pre-signed S3 URL or a downloaded temp file
+
+### 3. Alerting
+Send a Slack or email alert when a high-severity anomaly is detected.
+
+- After `detect_anomalies` runs, check if any anomaly has `severity: "high"`
+- If yes, call the Slack Webhook API or send via SendGrid/Resend before returning the report
+- Alert payload: anomaly type, column, description, and a link to the full report
+- Example: "🚨 Spike detected in `defect_rate` (8.5x mean) — M001 Assembly, 2024-01-06"
+
+### 4. Pipeline Integration
+Plug the agent in as a step inside dbt, Airflow, or Prefect.
+
+- **dbt** — add a post-hook that calls the analysis API after a model run completes, passing the output CSV path
+- **Airflow** — wrap `runAgent()` in a `PythonOperator` or call the REST API from an `HttpSensor`
+- **Prefect** — create a `@task` that uploads the CSV, calls `/api/analyze`, and logs the report as an artifact
+- The agent's structured JSON tool outputs make it easy to extract specific metrics (e.g., anomaly count) as pipeline signals
+
+---
+
 ## Deployment
 
 Deployed on **Railway** (backend) + **Vercel** (frontend).
